@@ -1,0 +1,18 @@
+﻿<Window x:Class="MVVMlab.Views.AddItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj produkt" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label Content="Nazwa:"/>
+            <TextBox Text="{Binding NewItem.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Content="Cena:"/>
+            <TextBox Text="{Binding NewItem.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Content="Kategoria:"/>
+            <TextBox Text="{Binding NewItem.Category, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Content="Ilość:"/>
+            <TextBox Text="{Binding NewItem.Quantity, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Dodaj" Command="{Binding AddCommand}" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
